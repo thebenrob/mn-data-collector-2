@@ -1,0 +1,1 @@
+DEBUG=mn-data-collector-2:* npm start
