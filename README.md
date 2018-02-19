@@ -7,4 +7,4 @@ MN Data Collector is an Express app designed to retrieve data about a list of Ma
 3. Run `npm start`
 4. Browse to [localhost:3000](http://localhost:3000/)
 
-When you first load, you'll be looking at cached data.  Use the [Refresh](http://localhost:3000) link to refresh the cache.  Use the [Long Form](http://localhost:3000/longform) view to see it in a giant table row (suitable for c/p).
+When you first load, you'll be looking at cached data.  Use the [Refresh](http://localhost:3000/refresh/) link to refresh the cache.  Use the [Long Form](http://localhost:3000/longform) view to see it in a giant table row (suitable for c/p).
