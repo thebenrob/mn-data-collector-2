@@ -10,6 +10,7 @@ block content
       th Volume (BTC)
       th Node Count
       th Node Worth (BTC)
+      th Volume/Worth Ratio
     each coin in data
       tr
         td(class='name')= coin.name
@@ -18,3 +19,4 @@ block content
         td= coin.volume
         td= coin.nodes
         td= coin.worth
+        td= coin.ratio
