@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  table(class='max100')
+    tr
+      each coin in data
+        td= coin.name
+        td= coin.price
+        td= coin.roi + '%'
+        td= coin.volume
+        td= coin.nodes
+        td= coin.worth
+        td= coin.ratio
+        td
