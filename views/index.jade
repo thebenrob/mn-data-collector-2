@@ -14,9 +14,9 @@ block content
     each coin in data
       tr
         td(class='name')= coin.name
-        td= coin.price
-        td= coin.roi + '%'
-        td= coin.volume
-        td= coin.nodes
-        td= coin.worth
-        td= coin.ratio
+        td(class='numbers')= coin.price
+        td(class='numbers')= coin.roi + '%'
+        td(class='numbers')= coin.volume
+        td(class='numbers')= coin.nodes
+        td(class='numbers')= coin.worth
+        td(class='numbers')= coin.ratio
