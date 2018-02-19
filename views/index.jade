@@ -4,15 +4,15 @@ block content
   h1= title
   table
     tr
-      td Name
-      td Price (BTC)
-      td ROI
-      td Volume (BTC)
-      td Node Count
-      td Node Worth (BTC)
+      th Name
+      th Price (BTC)
+      th ROI
+      th Volume (BTC)
+      th Node Count
+      th Node Worth (BTC)
     each coin in data
       tr
-        td= coin.name
+        td(class='name')= coin.name
         td= coin.price
         td= coin.roi + '%'
         td= coin.volume
