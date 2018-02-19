@@ -3,7 +3,7 @@
 MN Data Collector is an Express app designed to retrieve data about a list of Masternode Coins you're interested in and display them on a page.  What I do with it is c/p into my coin spreadsheet.
 
 1. Run `npm install`
-2. Open /routes/index.js to change the coins you're looking for (line 14)
+2. Open /data/coinList.js file to modify coins you're looking for
 3. Run `npm start`
 4. Browse to [localhost:3000](http://localhost:3000/)
 

@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var cheerio = require('cheerio');
+var coinList = require('../data/coinList');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,10 +12,7 @@ router.get('/', function(req, res, next) {
   var contents = fs.readFileSync('./cache/masternodes.online.html', 'utf8'); 
   var $ = cheerio.load(contents);    
   
-  var coins = ['END', 'NIHL', 'IFX', 'ZOC', 'NYXCOIN', 'CTF', 'CROP', 'ARGO', 'XAR',
-               'RACE', 'QBIC', 'CBS', 'ESCO', 'SAROS', 'NMS', 'YI', 'CARAT', 'VTAR' 
-              ];
-  $(coins).each(function(index, coin){
+  $(coinList).each(function(index, coin){
     
     var $cells = $('tr:contains("'+coin+'") td');
     var coinName = $cells.eq(2).text();
