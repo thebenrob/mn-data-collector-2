@@ -1,22 +1,23 @@
 var coinList = [
-  'END',
-  'NIHL',
-  'IFX',
-  'ZOC',
-  'NYX',
-  'CTF',
-  'CROP',
+  'Endorphin',
+  'NihiloCoin',
+  'Infinex',
+  '01 Coin',
+  'NYXCOIN',
+  'Coin2Fly',
+  'CropCoin',
   'ARGO',
-  'XAR',
-  'RACE',
+  'XaruCoin',
+  'RaceCoin',
   'QBIC',
-  'CBS',
-  'ESCO',
+  'Cerberus',
+  'Escrow',
   'SAROS',
-  'NMS',
-  'YI',
-  'CARAT',
-  'VTAR' 
+  'Numus',
+  'YICOIN',
+  'CaratusCoin',
+  'Vantaur',
+  'Rupaya' 
 ];
 
 module.exports = coinList;
