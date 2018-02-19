@@ -8,16 +8,17 @@ router.get('/', function(req, res, next) {
 
   var output = [];
 
-  var contents = fs.readFileSync('masternodes.online.html', 'utf8'); 
+  var contents = fs.readFileSync('./cache/masternodes.online.html', 'utf8'); 
   var $ = cheerio.load(contents);    
   
-  var coins = ['END', 'NIHL', 'IFX', 'ZOC', 'NYXCOIN', 'CTF', 'CROP', 'ARGO', 'XAR', 'RACE', 'QBIC', 'CBS', 'ESCO', 'SAROS', 'NMS', 'YI' ];
+  var coins = ['END', 'NIHL', 'IFX', 'ZOC', 'NYXCOIN', 'CTF', 'CROP', 'ARGO', 'XAR',
+               'RACE', 'QBIC', 'CBS', 'ESCO', 'SAROS', 'NMS', 'YI', 'CARAT', 'VTAR' 
+              ];
   $(coins).each(function(index, coin){
     
     var $cells = $('tr:contains("'+coin+'") td');
     var coinName = $cells.eq(2).text();
     var coinPrice = $cells.eq(3).children('span').attr('title');
-    //coinPrice = parseFloat(coinPrice.replace(/[\$,%]/g, ''));
     var coinROI = $cells.eq(7).children('strong').children('span').attr('title');
     var coinVolume = $cells.eq(5).children('span').attr('title');
     var nodeCount = $cells.eq(8).children('span').attr('title');

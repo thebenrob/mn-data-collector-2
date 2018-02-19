@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
     if(!error){
     
-      fs.writeFile('masternodes.online.html', html, function(err){
+      fs.writeFile('./cache/masternodes.online.html', html, function(err){
         
         if (!err) {
 

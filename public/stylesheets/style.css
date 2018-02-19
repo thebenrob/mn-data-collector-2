@@ -19,6 +19,10 @@ table, th, td {
   text-align: left;
 }
 
+table.max100 {
+  max-width: 1000px;
+}
+
 th {
   background-color: #4CAF50;
   color: white;
@@ -30,4 +34,8 @@ tr:nth-child(even) {
 
 td.name {
   min-width: 175px;
+}
+
+span.linkSpace {
+  padding-right: 20px;
 }
