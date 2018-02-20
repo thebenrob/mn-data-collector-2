@@ -2,6 +2,8 @@ extends layout
 
 block content
   h1= title
+  if refresh
+    p= 'Data was refreshed on: ' + refresh
   table
     tr
       th Name
