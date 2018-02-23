@@ -17,7 +17,29 @@ var coinList = [
   'YICOIN',
   'CaratusCoin',
   'Vantaur',
-  'Rupaya' 
+  'Rupaya',
+  'OMEGA',
+  'Bitcoin Lightning',
+  'LuckyBit',
+  'Olympic Coin',
+  'Absolute',
+  'Sanchezium',
+  'Stipend',
+  'MotileCoin',
+  'Ellerium Project',
+  'PHOBOS',
+  'Deviant',
+  'Bitcoin Green',
+  'Advance',
+  'HiddenTalk',
+  'GoaCoin',
+  'BashCoin',
+  'Beetle Coin',
+  'MEDIC Coin',
+  'Bithold',
+  'Northern',
+  'Astrum'
+  
 ];
 
 module.exports = coinList;
