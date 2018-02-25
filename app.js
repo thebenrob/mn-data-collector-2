@@ -6,10 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 var refresh = require('./routes/refresh_data');
 var longForm = require('./routes/long_form');
-var topCoins = require('./routes/top_coins');
 
 var app = express();
 
@@ -26,10 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/refresh', refresh);
 app.use('/longform', longForm);
-app.use('/top', topCoins);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
