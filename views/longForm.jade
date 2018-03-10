@@ -2,6 +2,8 @@ extends layout
 
 block content
   h1= title
+  p
+    a(href='#' onclick='copyTable("longestRow");') Copy Table
   table(class='max100')
     tr(id='longestRow')
       each coin in data
@@ -12,6 +14,5 @@ block content
         td= coin.nodes
         td= coin.worth
         td= coin.ratio
+        td= coin.payout
         td
-  p
-    a(href='#' onclick='copyTable("longestRow");') Copy Table

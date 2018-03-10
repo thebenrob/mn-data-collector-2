@@ -34,7 +34,9 @@ router.get('/', function(req, res, next) {
         var coinVolume = parseFloat($cells.eq(5).children('span').attr('title').replace(/[\$,%]/g, ''));
         var nodeCount = parseFloat($cells.eq(8).children('span').attr('title').replace(/[\$,%]/g, ''));
         var nodeWorth = parseFloat($cells.eq(10).children('span').attr('title').replace(/[\$,%]/g, ''));
+        var requiredCoins = parseFloat($cells.eq(9).children('span').attr('title').replace(/[\$,%]/g, ''));
         var volumeRatio = coinVolume / nodeWorth;
+        var dailyPayout = coinPrice * requiredCoins / 365;
         
         // construct the coinData object with all values
         var coinData = {
@@ -44,7 +46,8 @@ router.get('/', function(req, res, next) {
           nodes: nodeCount,
           volume: coinVolume.toFixed(3),
           worth: nodeWorth.toFixed(4),
-          ratio: volumeRatio.toFixed(4) 
+          ratio: volumeRatio.toFixed(4),
+          payout: dailyPayout.toFixed(6)
         };
         
         // push coinData onto the output arrays
