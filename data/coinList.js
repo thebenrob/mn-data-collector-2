@@ -38,7 +38,27 @@ var coinList = [
   'MEDIC Coin',
   'Bithold',
   'Northern',
-  'Astrum'
+  'Astrum',
+  'ZexCoin',
+  'Ethereum Future',
+  'ProfitHuntersCoin',
+  'Fornix',
+  'GINCoin',
+  'ZacaCoin',
+  'EXUS Coin',
+  'CurveCoin',
+  'LILI Coin',
+  'Ferrum Coin',
+  'Simplicity',
+  'Apollon Coin',
+  'SuperLumic Coin',
+  'MamboCoin',
+  'Virtus',
+  'FOLM',
+  'Rover Coin',
+  'Agena',
+  'League Coin',
+  'BU-GO'
   
 ];
 

@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   table(class='max100')
-    tr
+    tr(id='longestRow')
       each coin in data
         td= coin.name
         td= coin.price
@@ -13,3 +13,5 @@ block content
         td= coin.worth
         td= coin.ratio
         td
+  p
+    a(href='#' onclick='copyTable("longestRow");') Copy Table
