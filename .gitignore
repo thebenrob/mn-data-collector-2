@@ -2,3 +2,4 @@ node_modules/
 start.sh
 devstart.sh
 cache/
+_config.yml
