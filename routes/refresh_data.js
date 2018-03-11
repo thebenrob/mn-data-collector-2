@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
         var nodeWorth = parseFloat($cells.eq(10).children('span').attr('title').replace(/[\$,%]/g, ''));
         var requiredCoins = parseFloat($cells.eq(9).children('span').attr('title').replace(/[\$,%]/g, ''));
         var volumeRatio = coinVolume / nodeWorth;
-        var dailyPayout = coinPrice * requiredCoins / 365;
+        var dailyPayout = coinPrice * requiredCoins * coinROI / 365 / 100;
         
         // construct the coinData object with all values
         var coinData = {
