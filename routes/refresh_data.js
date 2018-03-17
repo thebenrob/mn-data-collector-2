@@ -19,7 +19,6 @@ router.get('/', function(req, res, next) {
 
       // intialize output arrays
       var output = [];
-      var topCoins = [];
 
       // load HTML into Cheerio
       var $ = cheerio.load(html);
@@ -52,10 +51,6 @@ router.get('/', function(req, res, next) {
         
         // push coinData onto the output arrays
         output.push(coinData);
-
-        if(coinROI > 1000) {
-          topCoins.push(coinData);
-        }
 
       }) // coinList.each()
 
