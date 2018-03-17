@@ -48,3 +48,15 @@ td.numbers {
 span.linkSpace {
   padding-right: 20px;
 }
+
+input {
+  display: block;
+  padding: 5px;
+  margin: 5px 0px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+button {
+  padding: 5px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
