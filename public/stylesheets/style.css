@@ -23,6 +23,10 @@ table.max100 {
   max-width: 1000px;
 }
 
+table.max250 {
+  max-width: 250px;
+}
+
 th {
   background-color: #4CAF50;
   color: white;

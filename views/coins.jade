@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p
+    a(href='/coins/add') Add Coin
+  table#coinTable.max250
+    each coin in coins
+      tr
+        td(class='name')= coin

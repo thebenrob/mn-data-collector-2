@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var refresh = require('./routes/refresh_data');
 var longForm = require('./routes/long_form');
+var coins = require('./routes/coins');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/refresh', refresh);
 app.use('/longform', longForm);
+app.use('/coins', coins);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

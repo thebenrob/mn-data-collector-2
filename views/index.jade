@@ -6,7 +6,7 @@ block content
     p= 'Data was refreshed on: ' + refresh
   p
     a(href='#' onclick='copyTable("coinTable");') Copy Table
-  table(id='coinTable')
+  table#coinTable
     tr
       th Name
       th Price (BTC)
@@ -18,11 +18,11 @@ block content
       th Daily Payout
     each coin in data
       tr
-        td(class='name')= coin.name
-        td(class='numbers')= coin.price
-        td(class='numbers')= coin.roi + '%'
-        td(class='numbers')= coin.volume
-        td(class='numbers')= coin.nodes
-        td(class='numbers')= coin.worth
-        td(class='numbers')= coin.ratio
-        td(class='numbers')= coin.payout
+        td.name= coin.name
+        td.numbers= coin.price
+        td.numbers= coin.roi + '%'
+        td.numbers= coin.volume
+        td.numbers= coin.nodes
+        td.numbers= coin.worth
+        td.numbers= coin.ratio
+        td.numbers= coin.payout

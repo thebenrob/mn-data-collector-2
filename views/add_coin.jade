@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    label(for='name') Coin:
+    input(type='text', placeholder='Magnet, Nihilo, etc' name='name')
+    button(type='submit') Add Coin
