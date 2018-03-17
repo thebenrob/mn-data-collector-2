@@ -4,7 +4,6 @@ var request = require('request');
 var fs = require('fs');
 var cheerio = require('cheerio');
 var coinList = require('../data/coinList');
-var async = require('async');
 
 /* GET refresh page*/
 router.get('/', function(req, res, next) {
