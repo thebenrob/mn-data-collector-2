@@ -5,7 +5,7 @@ var fs = require('fs');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  fs.readFile('./cache/coinData.cache', (err, data) => {
+  fs.readFile('./cache/coinData.json', (err, data) => {
     if (err) throw err;
     var output = JSON.parse(data);
 

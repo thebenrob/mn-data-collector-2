@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     refreshed = decodeURIComponent(req.query.refreshed_at);
   }
 
-  fs.readFile('./cache/coinData.cache', (err, data) => {
+  fs.readFile('./cache/coinData.json', (err, data) => {
     
     if (err) throw err;
     

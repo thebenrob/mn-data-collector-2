@@ -53,7 +53,7 @@ router.get('/', function(req, res, next) {
 
       }) // coinList.each()
 
-      fs.writeFile('./cache/coinData.cache', JSON.stringify(output), (err) => {
+      fs.writeFile('./cache/coinData.json', JSON.stringify(output), (err) => {
         res.redirect('/?refreshed_at=' + encodeURIComponent(new Date()));
       });
 
