@@ -59,17 +59,9 @@ router.get('/', function(req, res, next) {
 
       }) // coinList.each()
 
-      // write coinData to cache
-      async.parallel([
-          function(callback){fs.writeFile('./cache/coinData.cache', JSON.stringify(output), callback)},
-          function(callback){fs.writeFile('./cache/topCoins.cache', JSON.stringify(topCoins), callback)}
-        ],
-        function(err, results) {
-           console.log('Something went wrong with the async-y stuff');
+      fs.writeFile('./cache/coinData.cache', JSON.stringify(output), (err) => {
+        res.redirect('/?refreshed_at=' + encodeURIComponent(new Date()));
       });
-
-      // render the home page
-      res.redirect('/?refreshed_at=' + encodeURIComponent(new Date()));
 
     } // if(!error)
 
