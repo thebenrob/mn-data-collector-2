@@ -9,7 +9,7 @@ var coinList = require('../data/coinList');
 router.get('/', function(req, res, next) {
 
   // initialize URL
-  var url = 'https://masternodes.online/?convert=BTC';
+  var url = 'https://masternodes.online/?convert=BTC#masternode-stats';
 
   // read the HTML
   request(url, function(error, response, html){
@@ -36,6 +36,9 @@ router.get('/', function(req, res, next) {
         var volumeRatio = coinVolume / nodeWorth;
         var dailyPayout = coinPrice * requiredCoins * coinROI / 365 / 100;
         
+        // Keep track of progress in the console
+        console.log(coinName);
+
         // construct the coinData object with all values
         var coinData = {
           name: coinName, 
